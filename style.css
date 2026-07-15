@@ -802,3 +802,149 @@ ul{
     }
 
 }
+
+/* =====================================================
+   COMPLEMENT VERSION 1
+===================================================== */
+
+/* HEADER AU SCROLL */
+
+.header-scroll{
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+/* MENU MOBILE */
+
+@media(max-width:991px){
+
+    .navbar{
+
+        position:absolute;
+
+        top:82px;
+
+        left:0;
+
+        width:100%;
+
+        background:#ffffff;
+
+        display:none;
+
+        padding:25px;
+
+        box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    }
+
+    .navbar.mobile-active{
+
+        display:block;
+
+    }
+
+    .navbar ul{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+}
+
+/* ANIMATIONS */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.8s;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* WHATSAPP FLOTTANT */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    z-index:99999;
+
+    transition:.35s;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.12);
+
+}
+
+/* PETITE ANIMATION */
+
+.category-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
