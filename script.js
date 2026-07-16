@@ -147,3 +147,45 @@ faqItems.forEach(item => {
     });
 
 });
+
+/* =====================================================
+   MENU MOBILE PREMIUM
+===================================================== */
+
+const mobileMenu=document.querySelector(".mobile-menu");
+const overlay=document.querySelector(".overlay");
+const openMenu=document.querySelector(".menu-toggle");
+const closeMenu=document.querySelector(".close-menu");
+
+if(openMenu){
+
+openMenu.addEventListener("click",()=>{
+
+mobileMenu.classList.add("active");
+overlay.classList.add("active");
+
+});
+
+}
+
+if(closeMenu){
+
+closeMenu.addEventListener("click",()=>{
+
+mobileMenu.classList.remove("active");
+overlay.classList.remove("active");
+
+});
+
+}
+
+if(overlay){
+
+overlay.addEventListener("click",()=>{
+
+mobileMenu.classList.remove("active");
+overlay.classList.remove("active");
+
+});
+
+}
