@@ -1,3 +1,4 @@
+alert("Le script fonctionne !");
 /* =====================================================
    ARVEA NATURE
    SCRIPT.JS
