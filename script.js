@@ -208,18 +208,22 @@ if (searchInput) {
 }
 
 /* ===========================
-   FAQ ACCORDÉON
+   FAQ
 =========================== */
 
-const faqQuestions = document.querySelectorAll(".faq-question");
+document.addEventListener("DOMContentLoaded", () => {
 
-faqQuestions.forEach(question => {
+    const questions = document.querySelectorAll(".faq-question");
 
-    question.addEventListener("click", () => {
+    questions.forEach(question => {
 
-        const item = question.parentElement;
+        question.addEventListener("click", () => {
 
-        item.classList.toggle("active");
+            const item = question.parentElement;
+
+            item.classList.toggle("active");
+
+        });
 
     });
 
