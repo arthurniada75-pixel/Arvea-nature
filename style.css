@@ -2008,3 +2008,30 @@ ul{
     }
 
 }
+
+/* ===========================
+   FAQ
+=========================== */
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+}
+
+.faq-item.active .faq-answer{
+    max-height:300px;
+}
+
+.faq-question{
+    cursor:pointer;
+    width:100%;
+}
+
+.faq-question span{
+    transition:.3s;
+}
+
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+}
