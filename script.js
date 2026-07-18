@@ -206,24 +206,26 @@ if (searchInput) {
 
 }
 
-/* ===========================
-   FAQ
-=========================== */
+document.querySelectorAll(".faq-question").forEach(button => {
 
-document.addEventListener("DOMContentLoaded", () => {
+    button.onclick = function () {
 
-    const questions = document.querySelectorAll(".faq-question");
+        const answer = this.nextElementSibling;
 
-    questions.forEach(question => {
+        if (answer.style.maxHeight) {
 
-        question.addEventListener("click", () => {
+            answer.style.maxHeight = null;
 
-            const item = question.parentElement;
+            this.querySelector(".faq-icon").textContent = "+";
 
-            item.classList.toggle("active");
+        } else {
 
-        });
+            answer.style.maxHeight = answer.scrollHeight + "px";
 
-    });
+            this.querySelector(".faq-icon").textContent = "−";
+
+        }
+
+    };
 
 });
